@@ -31,5 +31,6 @@ CREATE TABLE commads (
 CREATE TABLE detail_cmd(
     FOREIGN KEY (cmd_num) varchar(255) REFERENCES commads(num_cmd),
     quantity int(255) NO NULL ,
-    FOREIGN KEY (product_id) varchar(255) REFERENCES Product(id_product)
+    FOREIGN KEY (product_id) varchar(255) REFERENCES Product(id_product).
+    PRIMARY KEY(product_id,cmd_num)
 );
